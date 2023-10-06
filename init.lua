@@ -15,10 +15,10 @@ return {
       --   ["remote2"] = "github_user/repo", -- GitHub user/repo shortcut,
       --   ["remote3"] = "github_user", -- GitHub user assume AstroNvim fork
     },
-  },
+   },
 
   -- Set colorscheme to use
-  colorscheme = "astrodark",
+  colorscheme = "zenburn",
 
   -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
   diagnostics = {
