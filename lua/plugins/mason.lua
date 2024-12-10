@@ -1,5 +1,5 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
-
+-- if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
+--
 -- Customize Mason plugins
 
 ---@type LazySpec
@@ -32,7 +32,44 @@ return {
     opts = {
       ensure_installed = {
         "python",
+        "codelldb",
         -- add more arguments for adding more debuggers
+      },
+      handlers = {
+        function(config)
+          -- all sources with no handler get passed here
+
+          -- Keep original functionality
+          require("mason-nvim-dap").default_setup(config)
+        end,
+        python = function(config)
+          config.adapters = {
+            type = "executable",
+            command = "/usr/bin/python3",
+            args = {
+              "-m",
+              "debugpy.adapter",
+            },
+          }
+          require("mason-nvim-dap").default_setup(config) -- don't forget this!
+        end,
+        codelldb = function(config)
+          config.configurations = {
+            {
+              type = "codelldb",
+              name = "Launch",
+              request = "launch",
+              program = function() return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file") end,
+              stopOnEntry = false,
+              args = function()
+                local input = vim.fn.input "Program arguments: "
+                return vim.split(input, " ")
+              end,
+              cwd = "${workspaceFolder}",
+            },
+          }
+          require("mason-nvim-dap").default_setup(config)
+        end,
       },
     },
   },

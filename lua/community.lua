@@ -63,6 +63,9 @@ return {
   -- EDITING SUPPORT
   { import = "astrocommunity.editing-support.copilotchat-nvim"},
 
+  -- PACKS
+  { import = "astrocommunity.pack.cpp" },
+
   -- WORKFLOW
   { import = "astrocommunity.workflow.hardtime-nvim" },
 }
