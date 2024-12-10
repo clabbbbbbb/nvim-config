@@ -57,6 +57,12 @@ return {
   { import = "astrocommunity.colorscheme.vim-nightfly-colors" },
   { import = "astrocommunity.colorscheme.vscode-nvim" },
 
+  -- COMPLETION
+  { import = "astrocommunity.completion.copilot-cmp" },
+
+  -- EDITING SUPPORT
+  { import = "astrocommunity.editing-support.copilotchat-nvim"},
+
   -- WORKFLOW
   { import = "astrocommunity.workflow.hardtime-nvim" },
 }
