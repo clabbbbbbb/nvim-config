@@ -61,10 +61,12 @@ return {
   { import = "astrocommunity.completion.copilot-cmp" },
 
   -- EDITING SUPPORT
-  { import = "astrocommunity.editing-support.copilotchat-nvim"},
+  { import = "astrocommunity.editing-support.copilotchat-nvim" },
 
   -- PACKS
   { import = "astrocommunity.pack.cpp" },
+  { import = "astrocommunity.pack.cs-omnisharp" },
+  { import = "astrocommunity.pack.vue" },
 
   -- WORKFLOW
   { import = "astrocommunity.workflow.hardtime-nvim" },
