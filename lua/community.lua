@@ -72,5 +72,5 @@ return {
   { import = "astrocommunity.workflow.hardtime-nvim" },
 
   -- REMOTE DEVELOPMENT
-  { import = "astrocommunity.remote-development.distant-nvim" },
+  { import = "astrocommunity.remote-development.remote-sshfs-nvim" },
 }
