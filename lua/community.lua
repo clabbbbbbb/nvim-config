@@ -65,6 +65,8 @@ return {
 
   -- PACKS
   { import = "astrocommunity.pack.cpp" },
+  { import = "astrocommunity.pack.cs-omnisharp" },
+  { import = "astrocommunity.pack.vue" },
 
   -- WORKFLOW
   { import = "astrocommunity.workflow.hardtime-nvim" },
